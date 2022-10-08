@@ -1,0 +1,9 @@
+{
+  "name": "portifolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Caio Caik Fresneda de Souza <caiofresneda@gmail.com>",
+  "license": "MIT",
+  "private":true,
+  "workspaces":["web/**"]
+}
