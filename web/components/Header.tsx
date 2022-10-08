@@ -2,7 +2,8 @@ import React from 'react';
 import {SocialIcon} from 'react-social-icons';
 import headerConfig from '../config/header';
 import { motion } from 'framer-motion';
-import { Props } from 'next/script';
+
+type Props = {}
 
 function Header({}:Props) {
   return (
