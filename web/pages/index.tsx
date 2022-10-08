@@ -5,7 +5,8 @@ import Hero from '../components/Hero';
 
 const Home: NextPage = () => {
   return <>
-  
+  <div className='bg-[rgb(36,36,36)] text-white h-screen overflow-x-hidden snap-y snap-mandatory overflow-scroll z-0'>
+
   <Head>
     <title>Portifolio</title>
   </Head>
@@ -14,7 +15,9 @@ const Home: NextPage = () => {
   <Header/>
 
   {/* Hero */}
-  <section id="Hero">
+  <section 
+    className='snap-center'
+    id="Hero">
     <Hero/>
   </section>
   {/* About */}
@@ -27,6 +30,7 @@ const Home: NextPage = () => {
 
   {/* Contact Me */}
 
+    </div> 
   </>
 }
 
