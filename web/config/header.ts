@@ -13,7 +13,8 @@ export interface headerConfigProps{
 const headerConfig: headerConfigProps = {
     linksSocial: [
         "https://linkedin.com/in/caiofrsouza",
-        "https://api.whatsapp.com/send?phone=5511983824485&text=Ol%C3%A1%2C%20vi%20o%20seu%20portifolio%20e%20gostaria%20de%20entrar%20em%20contato"
+        "https://api.whatsapp.com/send?phone=5511983824485&text=Ol%C3%A1%2C%20vi%20o%20seu%20portifolio%20e%20gostaria%20de%20entrar%20em%20contato",
+        "https://github.com/cks12",
     ],
     socialIcon: {
         color:"gray",
