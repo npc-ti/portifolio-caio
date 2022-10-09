@@ -3,6 +3,7 @@ import Head from 'next/head';
 import About from '../components/About';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import Work from '../components/Work';
 
 const Home: NextPage = () => {
   return <>
@@ -27,6 +28,10 @@ const Home: NextPage = () => {
     </section>
 
   {/* Experience */}
+
+  <section id="experiencia">
+    <Work/>
+    </section>
 
   {/* Skills */}
 

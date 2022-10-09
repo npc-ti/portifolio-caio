@@ -41,11 +41,16 @@
     }
 
     #app #sobre {
+        @apply snap-start;
+    }
+
+    #app #experiencia {
         @apply snap-center;
     }
 
     /* Generic Styles */
     .container {
         @apply h-screen flex flex-col items-center justify-center relative;
+        min-height: 900px;
     }
 }

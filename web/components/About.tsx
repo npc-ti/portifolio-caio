@@ -27,7 +27,7 @@ export default function About() {
           src={"/assets/images/Caio-about.jpeg"}/>
 
           <div className='space-y-10 px-0 md:px-10'>
-            <h4 className='text-4xl font-semibold'>Um pouco sobre a minha jornada</h4>
+            <h4 className='text-4xl font-semibold'>Um <span className='underline text-[#f7ab0a]'>pouco</span> sobre a minha <span className='underline text-[#f7ab0a]'>jornada.</span></h4>
             <p className='text-base'>
               {aboutConfig.Resume}
             </p>

@@ -7,8 +7,7 @@ type Props = {}
 
 function Header({}:Props) {
   return (
-    <header 
-        className=' '>
+    <header>
         {/* Social Icons */}
         <motion.div 
             initial={{
