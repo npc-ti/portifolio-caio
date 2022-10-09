@@ -12,11 +12,11 @@ export default function Work({}: Props) {
         transition = {{ duration:1.5 }}
         className='container overflow-hidden flex-col text-lft md:flex-row 
         max-w-full px-10 justify-evenly mx-auto '>
-            <h3 className='absolute top-24 uppercase tracking-[10px] text-gray-500 text-2xl'>
+            <h3 className='absolute top-24 uppercase tracking-[5px] text-gray-500 text-2xl'>
                 Experiencias
             </h3>
 
-            <div className='w-full flex space-x-5 overflow-x-scroll overflow-y-hidden p-10 snap-x snap-mandatory'>
+            <div className='w-full -mb-20 flex space-x-5 overflow-x-scroll overflow-y-hidden p-10 snap-x snap-mandatory'>
             <ExperienceCard/>
             <ExperienceCard/>
             <ExperienceCard/>

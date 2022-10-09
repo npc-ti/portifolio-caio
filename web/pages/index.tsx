@@ -21,8 +21,8 @@ const Home: NextPage = () => {
     id="resume">
     <Hero/>
   </section>
-  {/* About */}
 
+  {/* About */}
   <section id="sobre">
     <About/>
     </section>
