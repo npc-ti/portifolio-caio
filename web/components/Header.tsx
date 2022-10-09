@@ -8,9 +8,7 @@ type Props = {}
 function Header({}:Props) {
   return (
     <header 
-        className='sticky top-0 p-5 flex items-start justify-between max-w-7xl 
-        mx-auto z-20 
-        xl:items-center '>
+        className=' '>
         {/* Social Icons */}
         <motion.div 
             initial={{
@@ -26,7 +24,8 @@ function Header({}:Props) {
             transition={{
                 duration: headerConfig.headerAnimatedConfig.leftTimer
             }}
-            className='flex flex-row items-center'>
+            id={"socialIcon"}>
+
             {headerConfig.linksSocial.map((linksSocial, index) => {
                 return (
                     <SocialIcon
@@ -51,14 +50,14 @@ function Header({}:Props) {
             transition={{
                 duration: headerConfig.headerAnimatedConfig.rigthTimer
             }}
-            className='cursor-pointer flex flex-row items-center text-gray-300'
+            id={"email"}
             >
             <SocialIcon
                 network="email"
                 fgColor={headerConfig.socialIcon.color}
                 bgColor={headerConfig.socialIcon.background}
             />
-            <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+            <p>
                 Mandar um email
             </p>
         </motion.div>

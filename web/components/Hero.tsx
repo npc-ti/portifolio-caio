@@ -2,7 +2,7 @@ import React from 'react';
 import { Cursor, Typewriter, useTypewriter } from 'react-simple-typewriter'
 import heroConfig from '../config/hero';
 import BackgroundCircles from './BackgroundCircles';
-import CaioAvatar from '../assets/images/Caio-hero-avatar.jpg'
+import CaioAvatar from '../public/assets/images/Caio-hero-avatar.jpg'
 import Image from 'next/image';
 import Link from 'next/link';
 
