@@ -8,4 +8,44 @@
         tracking-widest text-gray-500 transition-all hover:text-[#f7ab0a]/40 active:text-[#f7ab0a]/40
         hover:border-[#f7ab0a]/40 active:border-[#f7ab0a]/40
     }
+    /* Style Application */
+    #app {
+        @apply bg-[rgb(36,36,36)] text-white h-screen 
+        overflow-x-hidden snap-y snap-mandatory overflow-scroll z-0
+    }
+
+    /* Styles Header */
+    #app header {
+        @apply sticky top-0 p-5 flex items-start 
+        justify-between max-w-7xl 
+        mx-auto z-20 xl:items-center
+    }
+
+    #app header #socialIcon {
+        @apply flex flex-row items-center
+    }
+
+    #app header #email {
+        @apply cursor-pointer flex flex-row items-center 
+        text-gray-300
+    }
+    
+    #app header #email p {
+        @apply uppercase hidden md:inline-flex text-sm text-gray-400
+    }
+
+    /* Styles Resume Section */
+
+    #app #resume {
+        @apply snap-start;
+    }
+
+    #app #sobre {
+        @apply snap-center;
+    }
+
+    /* Generic Styles */
+    .container {
+        @apply h-screen flex flex-col items-center justify-center relative;
+    }
 }
