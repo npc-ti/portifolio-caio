@@ -50,12 +50,16 @@
 
     
     #app #skills {
-        @apply snap-center;
+        @apply snap-start;
     }
 
     /* Generic Styles */
     .container {
         @apply h-screen flex flex-col items-center justify-center relative;
         min-height: 900px;
+    }
+
+    .title {
+        @apply absolute top-24 uppercase tracking-[5px] text-gray-500 text-2xl
     }
 }
