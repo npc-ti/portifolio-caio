@@ -41,10 +41,15 @@
     }
 
     #app #sobre {
-        @apply snap-start;
+        @apply snap-center;
     }
 
     #app #experiencia {
+        @apply snap-center;
+    }
+
+    
+    #app #skills {
         @apply snap-center;
     }
 
