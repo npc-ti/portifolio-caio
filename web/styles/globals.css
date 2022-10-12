@@ -36,21 +36,8 @@
 
     /* Styles Resume Section */
 
-    #app #resume {
-        @apply snap-start;
-    }
-
-    #app #sobre {
-        @apply snap-center;
-    }
-
-    #app #experiencia {
-        @apply snap-center;
-    }
-
-    
-    #app #skills {
-        @apply snap-start;
+    #app section {
+        @apply snap-start
     }
 
     /* Generic Styles */
