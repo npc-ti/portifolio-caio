@@ -10,7 +10,7 @@ type Props = {
 function Skill({diretionLeft, imgLink,inView}:Props) {
   const defaultX = diretionLeft?-200:200;
   return (
-    <div className='group relative flex cursor-pointer'>
+    <div className='group relative flex cursor-pointer ml-5 mt-2'>
         <motion.img
         initial={{
                 x:defaultX,

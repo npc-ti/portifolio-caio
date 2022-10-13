@@ -47,6 +47,6 @@
     }
 
     .title {
-        @apply absolute top-24 uppercase tracking-[5px] text-gray-500 text-2xl;
+        @apply mt-24 uppercase tracking-[5px] text-gray-500 text-2xl;
     }
 }

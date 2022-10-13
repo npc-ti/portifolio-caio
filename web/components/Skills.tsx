@@ -23,10 +23,10 @@ function Skills() {
       xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center
       `}>
       <h3 className="title">Hard Skills</h3>
-      <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm">
+      <h3 className="uppercase tracking-[3px] text-gray-500 text-sm">
         Passe o mouse para ver o meu nivel na tecnologia</h3>
 
-        <div className="grid grid-cols-2 gap-3 mt-40 md:grid-cols-4">
+        <div className="flex flex-row flex-wrap max-w-[900px] items-center justify-center mt-10">
           {
             skills.map((link, index) => {
               const left = index > Math.floor(skills.length/2);
