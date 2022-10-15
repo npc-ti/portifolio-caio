@@ -44,10 +44,9 @@
     .container {
         @apply min-h-screen flex flex-col items-center justify-center relative text-center;
         min-height: 1000px;
-        
     }
 
     .title {
-        @apply mt-24 uppercase tracking-[5px] text-gray-500 text-2xl;
+        @apply mt-10 uppercase tracking-[5px] text-gray-500 text-2xl;
     }
 }
