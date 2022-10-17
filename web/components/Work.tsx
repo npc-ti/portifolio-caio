@@ -10,7 +10,7 @@ export default function Work({}: Props) {
         initial={{ opacity: 0 }}
         whileInView = {{opacity: 1}}
         transition = {{ duration:1.5 }}
-        className='container overflow-hidden flex-col text-left
+        className='container overflow-hidden
         max-w-full px-10 justify-evenly mx-auto '>
             <h3 className='title'>
                 Experiencias

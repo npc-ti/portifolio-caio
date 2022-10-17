@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 @layer components {
+
+    body {
+        @apply overflow-hidden;
+    }
+
+    *{
+        border: 1px solid red;
+    }
+
     .heroButton {
         @apply px-6 py-2 border-[#242424] rounded-full uppercase text-xs
         tracking-widest text-gray-500 transition-all hover:text-[#f7ab0a]/40 active:text-[#f7ab0a]/40
@@ -34,13 +43,11 @@
         @apply uppercase hidden md:inline-flex text-sm text-gray-400
     }
 
-    /* Styles Resume Section */
-
-    #app section {
-        @apply snap-start
-    }
-
     /* Generic Styles */
+
+    section {
+        @apply min-h-screen w-screen flex items-center justify-center;
+    }
     .container {
         @apply min-h-screen flex flex-col items-center justify-center relative text-center;
         min-height: 1000px;
