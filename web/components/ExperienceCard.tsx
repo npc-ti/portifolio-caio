@@ -40,8 +40,8 @@ function ExperienceCard({experience}:ExperienceTypes) {
 
                 <ul className='list-disc space-y-4 ml-5 text-lg'>
                     {
-                        experience.points.map((item) => {
-                            return <li> {item} </li>
+                        experience.points.map((item,index) => {
+                            return <li key={index}> {item} </li>
                         })
                     }
                 </ul>

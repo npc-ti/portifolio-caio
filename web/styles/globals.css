@@ -13,7 +13,8 @@
     } */
 
     .scrollBar-y {
-        @apply scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80
+        @apply
+            md:scrollbar md:scrollbar-track-gray-400/20 md:scrollbar-thumb-[#f7ab0a]/80
     }
     .heroButton {
         @apply px-6 py-2 border-[#242424] rounded-full uppercase text-xs

@@ -38,7 +38,10 @@ function Contact() {
 
       <form
           onSubmit={formHook.handleSubmit(onSubmit)} 
-          className='mt-4 flex flex-col space-y-2 w-fit mx-auto border-spacing-3 border-red-50'>
+          className='mt-4 
+          flex flex-col max-w-[90%]
+          md-max-w-[100%] 
+          space-y-2 w-fit mx-auto border-spacing-3 border-red-50'>
           
           <div className='flex space-x-2'>
             <input {...formHook.register('name',{
