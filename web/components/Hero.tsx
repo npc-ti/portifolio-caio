@@ -1,15 +1,17 @@
 import React from 'react';
-import { Cursor, Typewriter, useTypewriter } from 'react-simple-typewriter'
+import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import heroConfig from '../config/hero';
 import BackgroundCircles from './BackgroundCircles';
-import CaioAvatar from '../public/assets/images/Caio-hero-avatar.jpg'
-import Image from 'next/image';
 import Link from 'next/link';
+import { PageInfo } from '../typing';
+import { urlFor } from '../sanity';
 
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo
+}
 
-export default function Hero({}: Props) {
+export default function Hero({pageInfo}: Props) {
     const [text,counter] = useTypewriter({
         words: heroConfig.wordList,
         loop: heroConfig.typeWriterLoop,
@@ -22,16 +24,11 @@ export default function Hero({}: Props) {
         <div className="z-[1] flex flex-col space-y-8 items-center justify-center overflow-hidden text-center">
 
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <div className='w-32 h-32 relative'>
-        <Image
-            layout="fill"
-            objectFit="cover"
-            lazyBoundary=''
-            className="rounded-full w-32 relative"  
-            src={CaioAvatar} 
+        <img
+            className="rounded-full w-40 h-40 object-cover relative"  
+            src={urlFor(pageInfo.heroImage).url()} 
             alt="Illustração do dono do portifolio" />
-        </div>
-        <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[10px]'>Desenvolvedor FullStack</h2>
+        <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[10px]'>{pageInfo.role}</h2>
         <h1 className='text-5xl lg:text-6xl font-semibold px-10 z-10'>
             <span className='mr-3'>{text}</span>
             <Cursor cursorColor='#f7ab0a'/>

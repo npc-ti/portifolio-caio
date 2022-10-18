@@ -5,9 +5,10 @@ type Props = {
     diretionLeft?: boolean;
     imgLink: string;
     inView: boolean;
+    percent: number | string;
 }
 
-function Skill({diretionLeft, imgLink,inView}:Props) {
+function Skill({diretionLeft, imgLink,inView,percent}:Props) {
   const defaultX = diretionLeft?-200:200;
   return (
     <div className='group relative flex cursor-pointer ml-5 mt-2'>
@@ -29,7 +30,7 @@ function Skill({diretionLeft, imgLink,inView}:Props) {
         ease-in-out group-hover:bg-white h-24 w-24 md:w-28 md:h-28 
         xl:w-32 xl:h-32 rounded-full z-0'>
           <div className="flex items-center justify-center h-full">
-            <p className="text-1xl md:text-2xl xl:text-3xl font-bold text-black opacity-100">100%</p>
+            <p className="text-1xl md:text-2xl xl:text-3xl font-bold text-black opacity-100">{percent}%</p>
           </div>
         </div>
     </div>

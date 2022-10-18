@@ -2,10 +2,14 @@ import React from 'react';
 import {SocialIcon} from 'react-social-icons';
 import headerConfig from '../config/header';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { Social } from '../typing';
 
-type Props = {}
+type Props = {
+    socials: Social[]
+}
 
-function Header({}:Props) {
+function Header({socials}:Props) {
   return (
     <header>
         {/* Social Icons */}
@@ -25,13 +29,13 @@ function Header({}:Props) {
             }}
             id={"socialIcon"}>
 
-            {headerConfig.linksSocial.map((linksSocial, index) => {
+            {socials.map((linksSocial) => {
                 return (
                     <SocialIcon
-                        url={linksSocial}
+                        url={linksSocial.url}
                         fgColor={headerConfig.socialIcon.color}
                         bgColor={headerConfig.socialIcon.background}
-                        key={index}
+                        key={linksSocial._id}
                         />)})}
         </motion.div>
 
@@ -56,9 +60,11 @@ function Header({}:Props) {
                 fgColor={headerConfig.socialIcon.color}
                 bgColor={headerConfig.socialIcon.background}
             />
+            <Link href={"#contato"} >
             <p>
-                Mandar um email
+                Entrar em contato
             </p>
+            </Link>
         </motion.div>
     </header>
   )

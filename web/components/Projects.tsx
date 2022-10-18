@@ -1,13 +1,52 @@
-import React, { useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
+import { ArrowLeftCircleIcon, ArrowRightCircleIcon, CodeBracketIcon, PlayIcon } from '@heroicons/react/24/solid';
+import { Project } from '../typing';
+import { urlFor } from '../sanity';
+import Link from 'next/link';
 
-function Projects() {
-  const [projects] = useState([1,2,3,4,5]);
+type Props = {
+  projects: Project[]
+}
+
+function Projects({projects}:Props) {
   const [useView, setView] = useState(false);
   
   function handleViewChange() {
     setView(!useView);
   }
+
+  const listRef = useRef<HTMLHeadingElement>(null);
+  const Scroll = useCallback((side: string) => {
+    
+    if(!listRef)
+      return;
+
+    const renderElements = projects.length;
+    const scrollIn = listRef.current?.scrollLeft || 0;
+
+    switch(side){
+      case 'left':
+        listRef.current?.scrollBy({
+          left:-scrollIn / renderElements - 500,
+          behavior:"smooth"
+        })
+        break;
+
+      case 'rigth':
+        console.log()
+        listRef.current?.scrollBy({
+          left:scrollIn / renderElements + 500,
+          behavior:"smooth"
+        })
+        break;
+
+      default: 
+        console.log("ref error");
+    }
+  },[]);
+
+
   return (
     <motion.div 
       initial={{opacity:0}}
@@ -16,13 +55,25 @@ function Projects() {
       whileInView={{opacity:1}}
       transition={{duration:1.5}}
       className='container max-w-[1200px]'>
+
       <div className="text-center mt-40">
         <h3 className='title'>Projetos</h3>
       </div>
 
-        <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
+        <button className='absolute hidden md:block top-[50%] z-50 left-5 rounded-full bg-[#f7ab0a]'>
+              <ArrowLeftCircleIcon onClick={() => Scroll('left')} className='text-[#242424] w-10 h-10'/>
+            </button>
+            <button className='absolute hidden md:block top-[50%] z-50 right-5 rounded-full bg-[#f7ab0a]'>
+            <ArrowRightCircleIcon onClick={() => Scroll('rigth')} className='text-[#242424] w-10 h-10'/>
+            </button>
+       
+        <div 
+        ref={listRef}
+        className="relative w-full flex
+        scrollbar-y scrollbar-thin
+        overflow-x-scroll overflow-y-hidden snap-x snap-center snap-mandatory z-20">
           {projects.map((project, index) => {
-            return <div className="w-screen flex-shrink-0 ml-0 xl:ml-[50%] snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44" key={index}>
+            return <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44" key={index}>
               <motion.img
                 initial={{
                   y:500
@@ -32,17 +83,26 @@ function Projects() {
                   y:0
                 }} 
                 className='object-contain w-[666px] h-auto' 
-                src="https://www.mockupworld.co/wp-content/uploads/2017/02/responsive-web-design-mockup-free-psd.jpg" 
+                src={urlFor(project.image).url()} 
                 alt="" />
               <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-                <h4 className='text-4xl font-semibold text-center'>
+                <h4 className='text-4xl flex items-center 
+                space-x-10
+                justify-center font-semibold text-center'>
                   <span className='underline decoration-[#f7ab0a]/50'>
-                  Title 
+                    {project.tile}
                   </span>
-                  {index}</h4>
+
+                <Link className='cursor-pointer' target={"_blank"} href={project.linkToBuild}>
+                      <PlayIcon className='w-10 h-10'/>
+                    </Link>
+
+                <Link className='cursor-pointer' target={"_blank"} href={project.linkToGitHub}>
+                      <CodeBracketIcon className='w-10 h-10'/>
+                    </Link>
+                  </h4>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum commodi quasi ullam nulla praesentium provident facere, vitae laboriosam dolorem consequuntur doloremque molestias a cupiditate maiores pariatur! Dolore quidem praesentium porro? 
-                    lorem
+                    {project.summary}
                   </p>
               </div>
             </div>

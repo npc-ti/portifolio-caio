@@ -12,6 +12,9 @@
         border: 1px solid red;
     } */
 
+    .scrollBar-y {
+        @apply scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80
+    }
     .heroButton {
         @apply px-6 py-2 border-[#242424] rounded-full uppercase text-xs
         tracking-widest text-gray-500 transition-all hover:text-[#f7ab0a]/40 active:text-[#f7ab0a]/40 
@@ -21,7 +24,7 @@
     /* Style Application */
     #app {
         @apply bg-[rgb(36,36,36)] text-white h-screen 
-        overflow-x-hidden snap-y snap-mandatory overflow-scroll z-0
+        overflow-hidden overflow-y-scroll snap-y snap-mandatory z-0 scrollBar-y;
     }
 
     /* Styles Header */

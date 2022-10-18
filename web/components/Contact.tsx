@@ -36,17 +36,7 @@ function Contact() {
         </h4>
       </div>
 
-      <div>
-        <div className='flex items-center justify-center space-x-5'>
-          <PhoneIcon className='w-7 h-7 text-[#f7ab0a] animate-pulse'/>
-          <p className='text-2xl'>+55 11 98382-4485</p>
-        </div>
-
-        <div className='flex items-center justify-center space-x-5'>
-          <EnvelopeIcon className='w-7 h-7 text-[#f7ab0a] animate-pulse'/>
-          <p className='text-2xl'>caiofresneda@gmail.com</p>
-        </div>
-        <form
+      <form
           onSubmit={formHook.handleSubmit(onSubmit)} 
           className='mt-4 flex flex-col space-y-2 w-fit mx-auto border-spacing-3 border-red-50'>
           
@@ -82,6 +72,20 @@ function Contact() {
             font-bold
           '>Enviar</button>
         </form>
+
+      <div>
+        <div className='flex items-center justify-center mt-10 space-x-5'>
+          <PhoneIcon className='w-7 h-7 text-[#f7ab0a] animate-pulse'/>
+          <p className='text-2xl'>+55 11 98382-4485</p>
+        </div>
+
+        <div className='flex items-center justify-center space-x-5'>
+          <EnvelopeIcon className='w-7 h-7 text-[#f7ab0a] animate-pulse'/>
+          <p className='text-2xl'>caiofresneda@gmail.com</p>
+        </div>
+
+          <p className='text-2xl mt-10'>@Feito com {"💛"} em São Paulo</p>
+        
       </div>
     </div>
   </>
