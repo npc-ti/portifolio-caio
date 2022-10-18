@@ -2,8 +2,8 @@
   "name": "portifolio",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Caio Caik Fresneda de Souza <caiofresneda@gmail.com>",
+  "author": "Caio Caik Fresneda de Souza <caiofresneda@gmail.com> | Sonny Sangha",
   "license": "MIT",
   "private":true,
-  "workspaces":["web/**"]
+  "workspaces":["web/**", "sanity/**"]
 }
