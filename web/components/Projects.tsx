@@ -22,14 +22,13 @@ function Projects() {
 
         <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
           {projects.map((project, index) => {
-            console.log(project)
             return <div className="w-screen flex-shrink-0 ml-0 xl:ml-[50%] snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44" key={index}>
               <motion.img
                 initial={{
                   y:500
                 }}
                 transition={{delay:0.5}}
-                whileInView={{
+                animate={{
                   y:0
                 }} 
                 className='object-contain w-[666px] h-auto' 
