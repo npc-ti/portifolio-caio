@@ -22,7 +22,6 @@ import { fecthProjects } from '../utils/fetchProjects';
 import { fecthSkills } from '../utils/fetchSkills';
 import { fecthSocials } from '../utils/fetchSocials';
 import { fecthExperience } from '../utils/fetchExperience';
-import Image from 'next/image';
 
 type Props = {
   pageInfo: PageInfo,
@@ -82,9 +81,8 @@ const Home = (props: Props) => {
     <Link href="#resume">
       <footer className='sticky bottom-5 w-full cursor-pointer'>
         <div className='flex items-center justify-center'>
-          <Image src="/assets/images/Caio-Experience-avatar.svg" alt=""
-          width={"30px"} height={"30px"}  
-            className="rounded-full filter grayscale 
+          <img src="assets/images/Caio-Experience-avatar.svg" alt="" 
+            className="h-10 w-10 rounded-full filter grayscale 
             hover:grayscale-0 transition-all" />
         </div>
       </footer>

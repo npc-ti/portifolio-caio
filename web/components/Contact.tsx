@@ -43,20 +43,20 @@ function Contact() {
           md-max-w-[100%] 
           space-y-2 w-fit mx-auto border-spacing-3 border-red-50'>
           
-          <div className='flex space-x-2'>
+          <div className='flex space-y-2 md:space-y-0 md:space-x-2 flex-wrap items-center justify-center'>
             <input {...formHook.register('name',{
               required: true,
               maxLength: 40,
               minLength: 8,
             })} 
-            placeholder='Nome' className='contactInput' type="text" />
+            placeholder='Nome' className='contactInput w-full md:w-auto' type="text" />
 
             <input {...formHook.register('email',{
               required: true,
               maxLength: 40,
               minLength: 8,
             })} 
-            placeholder='Email' className='contactInput' type="email" />
+            placeholder='Email' className='contactInput w-full md:w-auto' type="email" />
           </div>
 
           <input {...formHook.register('subject',{

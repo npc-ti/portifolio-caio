@@ -28,11 +28,13 @@ function ExperienceCard({experience}:ExperienceTypes) {
                 <div className="flex space-x-2 my-2">
                     {
                         experience.tech.map((item) => {
-                            return <img
+                            return<>
+                            <img
                             className='w-10 h-10 rounded-full'
                             src={urlFor(item.image).url()}
                             key={item._id}
                             />
+                            </>
                         })
                     }
                 </div>
