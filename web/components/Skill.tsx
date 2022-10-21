@@ -15,7 +15,7 @@ function Skill({diretionLeft, imgLink,inView,percent}:Props) {
         <motion.img
         initial={{
                 x:defaultX,
-                opacity:0
+                opacity:0.1
             }}
         animate={{
           opacity:inView?1:0,

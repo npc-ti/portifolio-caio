@@ -1,6 +1,6 @@
 import React from 'react';
-import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
-import { Cursor, Typewriter, useTypewriter } from 'react-simple-typewriter';
+import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
+import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
 // TypeFormInput 
@@ -21,8 +21,13 @@ function Contact() {
 });
 
   const formHook = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = data => {
-    console.log(data);  
+  const onSubmit: SubmitHandler<Inputs> = async(data) => {
+    await fetch("/api/mailer",{
+      method:'POST',
+      headers:{'Content-Type': 'application/json'}, 
+      body:JSON.stringify(data)
+    });
+    alert("O seu contato foi enviado com sucesso!");  
   }
 
   return <>

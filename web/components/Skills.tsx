@@ -20,7 +20,7 @@ function Skills({skills}:Props) {
 
   return (
     <motion.div 
-      initial={{opacity:0}}
+      initial={{opacity:0.1}}
       onViewportEnter={handleViewChange}
       onViewportLeave={handleViewChange}
       animate={{opacity:inView?1:0}}

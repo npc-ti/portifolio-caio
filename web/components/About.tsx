@@ -13,7 +13,7 @@ export default function About({
 }:Props) {
   return (
     <motion.div 
-      initial={{opacity:0}}
+      initial={{opacity:0.1}}
       whileInView = {{opacity:1}}
       transition ={{duration:1.5}}
       className='container md:text:left max-w-7xl px-10 justify-evenly mx-auto'>

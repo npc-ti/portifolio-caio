@@ -14,7 +14,7 @@ function ExperienceCard({experience}:ExperienceTypes) {
         <motion.img
             initial= {{
                 y:-100,
-                opacity:0
+                opacity:0.1
             }}
             whileInView = {{y:0, opacity: 1}}
             transition={{duration: 1.2}}

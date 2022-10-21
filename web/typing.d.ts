@@ -1,3 +1,5 @@
+import { NextApiRequest } from "next"
+
 interface SanityBody{
     _createdAt:string,
     _id:string,
@@ -65,4 +67,11 @@ export interface Social extends SanityBody {
     _type:"social",
     tile: string,
     url: string
+}
+
+export interface EmailBody {
+    email: string, 
+    msg: string,
+    name: string,
+    subject: string,
 }
